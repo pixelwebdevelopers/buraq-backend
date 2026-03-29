@@ -8,7 +8,6 @@ const studentRoutes = require('./studentRoutes');
 const familyRoutes = require('./familyRoutes');
 const feeRoutes = require('./feeRoutes');
 const userRoutes = require('./userRoutes');
-const migrationRoutes = require('./migrationRoutes');
 
 /**
  * API Route Index
@@ -21,7 +20,6 @@ const migrationRoutes = require('./migrationRoutes');
  * ├── /families   → Family tree management routes
  * ├── /fees       → Fee voucher management routes
  * ├── /users      → User management routes
- * ├── /system     → System management (Migrations/Seeders)
  * └── ...         → Future module routes
  */
 router.use('/auth', authRoutes);
@@ -31,6 +29,5 @@ router.use('/students', studentRoutes);
 router.use('/families', familyRoutes);
 router.use('/fees', feeRoutes);
 router.use('/users', userRoutes);
-router.use('/system', migrationRoutes);
 
 module.exports = router;
